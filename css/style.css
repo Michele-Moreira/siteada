@@ -1,13 +1,12 @@
 :root {
-  --bg-1: #fbf8ff;
-  --image-purple: #a02be9; /* roxo do gradiente de fundo */
-  --image-purple-2: #7a1fd6;
-  --purple-300: #c9b7ff;
-  --purple-600: var(--image-purple);
-  --title-yellow: #ffd400; /* amarelo dos títulos */
+  --image-purple: #a888b5; /* roxo do gradiente de fundo */
+  --image-purple-2: #8174a0;
+  --pink-300: #efb6c8;
+  --pink-600: var(--image-purple);
+  --title-yellow: #ffd2a0; /* amarelo dos títulos */
   --yellow-100: #fff5cc;
   --yellow-300: #ffe88a;
-  --muted: #ffffff; /* texto principal claro sobre fundo roxo */
+  --muted: #f4f4f7; /* off-white: tom menos branco */
 }
 
 * {
@@ -16,8 +15,14 @@
 
 body {
   text-align: center;
-  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
+  font-family:
+    "Open Sans",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
   background: linear-gradient(
     180deg,
     var(--image-purple),
@@ -52,7 +57,7 @@ h3 {
 }
 
 section h3 {
-  color: var(--yellow-300);
+  color: var(--yellow-100);
 }
 
 section {
@@ -69,7 +74,7 @@ p {
   line-height: 1.6;
   font-size: clamp(14px, 2.2vw, 18px);
   margin: 10px 0;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--muted);
 }
 
 /* Imagens menores e arredondadas */
@@ -90,22 +95,22 @@ ul {
 }
 
 a {
-  color: var(--purple-600);
+  color: var(--pink-600);
   font-weight: 600;
   text-decoration: none;
   transition: color 160ms ease;
 }
 a:hover {
-  color: var(--purple-300);
+  color: var(--pink-300);
 }
 
 /* nomes das mulheres (links externos no segundo nav) */
 nav:not(.principal) a {
-  color: #a02be9;
+  color: var(--pink-600);
   font-weight: 700;
 }
 nav:not(.principal) a:hover {
-  color: #c9b7ff;
+  color: var(--pink-300);
   text-decoration: underline;
 }
 
@@ -134,21 +139,24 @@ nav:not(.principal) a:hover {
   list-style: none;
 }
 .principal a {
-  color: var(--purple-600);
+  color: var(--image-purple-2);
   font-weight: 600;
   padding: 8px 12px;
   border-radius: 8px;
   display: inline-block;
-  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease;
   text-decoration: none;
 }
 .principal a:hover {
+  color: var(--image-purple-2);
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(122, 93, 233, 0.12);
 }
 
 button {
-  background: linear-gradient(180deg, var(--purple-300), var(--purple-600));
+  background: linear-gradient(180deg, var(--pink-300), var(--pink-600));
   color: white;
   border: 0;
   padding: 8px 18px;
@@ -183,7 +191,7 @@ form {
 
 form label {
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--muted);
   margin-bottom: 6px;
 }
 
@@ -261,7 +269,9 @@ form textarea {
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
 }
 .rodape .socials a:hover {
   transform: translateY(-4px);
